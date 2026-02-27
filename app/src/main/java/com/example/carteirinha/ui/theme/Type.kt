@@ -5,6 +5,7 @@ import androidx.compose.ui.text.font.FontFamily
 
 import androidx.compose.ui.text.googlefonts.GoogleFont
 import androidx.compose.ui.text.googlefonts.Font
+import androidx.compose.ui.unit.sp
 import com.example.carteirinha.R
 
 val provider = GoogleFont.Provider(
@@ -40,7 +41,7 @@ val AppTypography = Typography(
     titleLarge = baseline.titleLarge.copy(fontFamily = displayFontFamily),
     titleMedium = baseline.titleMedium.copy(fontFamily = displayFontFamily),
     titleSmall = baseline.titleSmall.copy(fontFamily = displayFontFamily),
-    bodyLarge = baseline.bodyLarge.copy(fontFamily = bodyFontFamily),
+    bodyLarge = baseline.bodyLarge.copy(fontFamily = bodyFontFamily, fontSize = 18.sp),
     bodyMedium = baseline.bodyMedium.copy(fontFamily = bodyFontFamily),
     bodySmall = baseline.bodySmall.copy(fontFamily = bodyFontFamily),
     labelLarge = baseline.labelLarge.copy(fontFamily = bodyFontFamily),
