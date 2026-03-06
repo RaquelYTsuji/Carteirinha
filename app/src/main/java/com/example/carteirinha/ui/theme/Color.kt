@@ -1,7 +1,7 @@
 package com.example.carteirinha.ui.theme
 import androidx.compose.ui.graphics.Color
 
-val primaryLight = Color(0xFF8F4C38)
+val primaryLight = Color(0xFF93000A)
 val onPrimaryLight = Color(0xFFFFFFFF)
 val primaryContainerLight = Color(0xFFFFDBD1)
 val onPrimaryContainerLight = Color(0xFF723523)
@@ -109,7 +109,7 @@ val surfaceContainerLightHighContrast = Color(0xFFF1DFDA)
 val surfaceContainerHighLightHighContrast = Color(0xFFE2D1CC)
 val surfaceContainerHighestLightHighContrast = Color(0xFFD4C3BE)
 
-val primaryDark = Color(0xFFFFB5A0)
+val primaryDark = Color(0xFFD76161)
 val onPrimaryDark = Color(0xFF561F0F)
 val primaryContainerDark = Color(0xFF723523)
 val onPrimaryContainerDark = Color(0xFFFFDBD1)
