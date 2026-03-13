@@ -1,4 +1,4 @@
-package com.example.carteirinha.ui.theme
+package com.example.carteirinha.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily
