@@ -20,7 +20,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import com.example.carteirinha.core.designsystem.theme.AppTheme
-import com.example.carteirinha.feature.carteirinha.presentation.CarteirinhaScreen
+import com.example.carteirinha.feature.carteirinha.presentation.screen.CarteirinhaScreen
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
@@ -28,43 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            AppTheme() {
-                Scaffold(
-                    topBar = {
-                        TopAppBar(
-                            colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.background,
-                                titleContentColor = MaterialTheme.colorScheme.error,
-                            ),
-                            title = {
-                                Text("Top app bar")
-                            }
-                        )
-                    },
-                    bottomBar = {
-                        BottomAppBar(
-                            containerColor = MaterialTheme.colorScheme.background,
-                            contentColor = MaterialTheme.colorScheme.error,
-                        ) {
-                            Text(
-                                modifier = Modifier.Companion
-                                    .fillMaxWidth(),
-                                textAlign = TextAlign.Companion.Center,
-                                text = "Bottom app bar",
-                            )
-                        }
-                    },
-                    floatingActionButton = {
-                        FloatingActionButton(onClick = { }) {
-                            Icon(Icons.Default.Add, contentDescription = "Add")
-                        }
-                    }
-                ) { innerPadding ->
-                    CarteirinhaScreen(
-                        modifier = Modifier.Companion.padding(innerPadding)
-                    )
-                }
-            }
+            App()
         }
     }
 }

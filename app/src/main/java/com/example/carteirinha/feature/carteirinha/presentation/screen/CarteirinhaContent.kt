@@ -1,4 +1,4 @@
-package com.example.carteirinha.feature.carteirinha.presentation
+package com.example.carteirinha.feature.carteirinha.presentation.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,15 +26,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.carteirinha.feature.carteirinha.presentation.component.LabelText
 import com.example.carteirinha.R
-import com.example.carteirinha.feature.carteirinha.presentation.component.ValueText
 import com.example.carteirinha.core.designsystem.theme.AppTheme
+import com.example.carteirinha.feature.carteirinha.presentation.component.LabelText
+import com.example.carteirinha.feature.carteirinha.presentation.component.ValueText
 import com.rafaelcosta.myapplication.QrCode
 
-
 @Composable
-fun CarteirinhaScreen(modifier: Modifier = Modifier) {
+fun CarteirinhaContent(
+    qrCodeContent: String = "numero de matricula do aluno",
+    modifier: Modifier = Modifier
+) {
     Box(
         modifier = modifier.fillMaxSize()
             .background(brush = Brush.verticalGradient(
