@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.carteirinha.R
@@ -34,23 +35,27 @@ fun LoginContent(
     login: String = "",
     senha: String = "",
     onLoginChange: (String) -> Unit = {},
-    onSenhaChange: (String) -> Unit ={},
+    onSenhaChange: (String) -> Unit = {},
     onLoginClick: () -> Unit = {}
 ) {
     Box(
-        modifier = modifier.fillMaxSize()
-            .background(brush = Brush.verticalGradient(
-                colors = listOf(
-                    MaterialTheme.colorScheme.error,
-                    MaterialTheme.colorScheme.onError
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        MaterialTheme.colorScheme.error,
+                        MaterialTheme.colorScheme.onError
+                    )
                 )
-            )),
+            ),
         contentAlignment = Alignment.Center
     ) {
         Image(
             painter = painterResource(R.drawable.background_image),
             contentDescription = "Background",
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier
+                .fillMaxSize()
                 .graphicsLayer(alpha = 0.3f),
             contentScale = ContentScale.Crop
         )
@@ -72,18 +77,19 @@ fun LoginContent(
                 Image(
                     painter = painterResource(id = R.drawable.logo_senai),
                     contentDescription = "Logo do senai",
-                    modifier = Modifier.fillMaxWidth(0.9f)
+                    modifier = Modifier
+                        .fillMaxWidth(0.9f)
                         .align(Alignment.CenterHorizontally)
                 )
                 OutlinedTextField(
                     value = login,
                     onValueChange = onLoginChange,
-                    label = { Text("Login") }
+                    label = { Text(stringResource(R.string.login)) }
                 )
                 OutlinedTextField(
                     value = senha,
                     onValueChange = onSenhaChange,
-                    label = { Text("Senha") }
+                    label = { Text(stringResource(R.string.senha)) }
                 )
                 Button(
                     onClick = onLoginClick,
@@ -98,7 +104,7 @@ fun LoginContent(
                         containerColor = MaterialTheme.colorScheme.error
                     )
                 ) {
-                    Text("Entrar")
+                    Text(stringResource(R.string.entrar))
                 }
             }
         }
