@@ -78,6 +78,20 @@ fun HomeScreen(
                 ) {
                     Text("Carteirinha")
                 }
+                Button(
+                    onClick = {
+                        navController.navigate(
+                            Routes.UnidadeCurricular.route
+                        )},
+                    shape = RoundedCornerShape(
+                        size = 10.dp
+                    ),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.error
+                    )
+                ) {
+                    Text("Unidade Curricular")
+                }
             }
         }
     }

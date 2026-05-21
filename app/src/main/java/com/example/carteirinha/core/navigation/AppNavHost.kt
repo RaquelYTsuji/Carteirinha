@@ -11,6 +11,7 @@ import androidx.navigation.compose.composable
 import com.example.carteirinha.feature.auth.presentation.screen.LoginScreen
 import com.example.carteirinha.feature.carteirinha.presentation.screen.CarteirinhaScreen
 import com.example.carteirinha.feature.home.presentation.HomeScreen
+import com.example.carteirinha.feature.unidadecurricular.presentation.screen.UnidadeCurricularScreen
 
 @Composable
 fun AppNavHost(
@@ -36,6 +37,13 @@ fun AppNavHost(
         }
         composable(Routes.Home.route){
             HomeScreen(
+                modifier = Modifier
+                    .fillMaxSize(),
+                navController = navController
+            )
+        }
+        composable(Routes.UnidadeCurricular.route){
+            UnidadeCurricularScreen(
                 modifier = Modifier
                     .fillMaxSize(),
                 navController = navController
